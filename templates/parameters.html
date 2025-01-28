@@ -1,0 +1,31 @@
+<html>
+  <head>
+      <meta charset = 'UTF-8'>
+      <title>FWI Prediction</title>
+  </head>
+   <body>    
+    <form action = "{{url_for('predict_data')}}", method = 'POST'>
+        <label>Temperature</label>
+        <input type ='text' name='Temperature' required='required' /><br>
+        <label>RH</label>
+        <input type ='text' name='RH' required='required' /><br>
+        <label>Ws</label>
+        <input type ='text' name='Ws' required='required' /><br>
+        <label>Rain</label>
+        <input type ='text' name='Rain' required='required' /><br>
+        <label>FFMC</label>
+        <input type ='text' name='FFMC' required='required' /><br>
+        <label>DMC</label>
+        <input type ='text' name='DMC' required='required' /><br>
+        <label>ISI</label>
+        <input type ='text' name='ISI' placeholder='ISI' required='required' /><br>
+        <input type ='text' name='Classes' placeholder='Classes' required='required' /><br>
+        <input type ='text' name='Region' placeholder='REGION' required='required' /><br>
+        
+        <button type ='submit' class ="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <h1>
+        The FWI Prediction is {{results}}
+    </h1>
+   </body>
+</html>
